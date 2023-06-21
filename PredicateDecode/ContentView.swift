@@ -1,62 +1,33 @@
-//
-//  ContentView.swift
-//  PredicateDecode
-//
-//  Created by Ahmed Khalaf on 21/6/2023.
-//
-
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
     
+    @Environment(\.modelContext) internal var context
+
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
-        }
+        
+        /// Tap this to encode a native `Predicate`.
+        /// The json file (see console for path) is what we need to construct manually.
+        ///
+        Button("Encode Native Predicate") {
+            encodeNativePredicate()
+        }.buttonStyle(.borderedProminent)
+        
+        /// Tap this to encode the same predicate by reversing the approach:
+        /// - Constructs the `CustomPredicate` first following the same structure observed in the file above.
+        /// - Encodes this into JSON
+        /// - Decodes it into `ChoonPredicate` which uses `PredicateCodableConfiguration` to get the `Predicate<Choon>` we're after.
+        ///     https://developer.apple.com/documentation/foundation/predicatecodableconfiguration
+        ///
+        Button("Encode Predicate from JSON") {
+            encodePredicateFromJSON()
+        }.buttonStyle(.borderedProminent)
+        
+        
+        /// **Update:** One thing I did notice while making this was that `$.predicate.[0].variable.key = 2`
+        /// in the native predicate. It was `1` while working on this a week or so back. It seems to still work as long as the `key`
+        /// in the rest of the json matches.
+        ///
+        /// I also noticed that when using nested predicates, multiple `key`s are used where an increment indicates a deeper level.
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
-    }
-}
-
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }

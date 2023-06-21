@@ -8,20 +8,78 @@
 
 /* Begin PBXBuildFile section */
 		E25BBB342A42B0990050C8C6 /* PredicateDecodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB332A42B0990050C8C6 /* PredicateDecodeApp.swift */; };
-		E25BBB362A42B0990050C8C6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB352A42B0990050C8C6 /* Item.swift */; };
+		E25BBB362A42B0990050C8C6 /* ChoonPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB352A42B0990050C8C6 /* ChoonPredicate.swift */; };
 		E25BBB382A42B0990050C8C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB372A42B0990050C8C6 /* ContentView.swift */; };
 		E25BBB3A2A42B09A0050C8C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25BBB392A42B09A0050C8C6 /* Assets.xcassets */; };
 		E25BBB3E2A42B09A0050C8C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25BBB3D2A42B09A0050C8C6 /* Preview Assets.xcassets */; };
+		E25BBB452A42B0E40050C8C6 /* Choon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB442A42B0E40050C8C6 /* Choon.swift */; };
+		E25BBB472A42B1E40050C8C6 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB462A42B1E40050C8C6 /* Tag.swift */; };
+		E25BBB4A2A42B2890050C8C6 /* AppleSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB492A42B2890050C8C6 /* AppleSong.swift */; };
+		E25BBB4C2A42B2A00050C8C6 /* AppleAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB4B2A42B2A00050C8C6 /* AppleAlbum.swift */; };
+		E25BBB4E2A42B2C30050C8C6 /* AppleArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB4D2A42B2C30050C8C6 /* AppleArtwork.swift */; };
+		E25BBB502A42B2EE0050C8C6 /* AppleArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB4F2A42B2EE0050C8C6 /* AppleArtist.swift */; };
+		E25BBB532A42B31F0050C8C6 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB522A42B31F0050C8C6 /* Marker.swift */; };
+		E25BBB552A42B3380050C8C6 /* VocalLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB542A42B3380050C8C6 /* VocalLevel.swift */; };
+		E25BBB572A42B3950050C8C6 /* TagIdWithType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB562A42B3950050C8C6 /* TagIdWithType.swift */; };
+		E25BBB592A42B3F30050C8C6 /* TagType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB582A42B3F30050C8C6 /* TagType.swift */; };
+		E25BBB5B2A42B4820050C8C6 /* ContentView+PredicateCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB5A2A42B4820050C8C6 /* ContentView+PredicateCoding.swift */; };
+		E25BBB5D2A42B9E70050C8C6 /* Mix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB5C2A42B9E70050C8C6 /* Mix.swift */; };
+		E25BBB652A42BB820050C8C6 /* MixParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB642A42BB820050C8C6 /* MixParam.swift */; };
+		E25BBB672A42BF050050C8C6 /* Mix+Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB662A42BF050050C8C6 /* Mix+Predicate.swift */; };
+		E25BBB692A42BF420050C8C6 /* EncodedPredicateContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB682A42BF420050C8C6 /* EncodedPredicateContent.swift */; };
+		E25BBB6C2A42C0080050C8C6 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB6B2A42C0080050C8C6 /* Date.swift */; };
+		E25BBB6E2A42C00C0050C8C6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB6D2A42C00C0050C8C6 /* String.swift */; };
+		E25BBB702A42C01F0050C8C6 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB6F2A42C01F0050C8C6 /* Int.swift */; };
+		E25BBB722A42C0410050C8C6 /* MixParamType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB712A42C0410050C8C6 /* MixParamType.swift */; };
+		E25BBB742A42C0460050C8C6 /* MixJoinTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB732A42C0460050C8C6 /* MixJoinTypes.swift */; };
+		E25BBB762A42C0650050C8C6 /* MixRangeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB752A42C0650050C8C6 /* MixRangeStrings.swift */; };
+		E25BBB782A42C0870050C8C6 /* Array+MixParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB772A42C0870050C8C6 /* Array+MixParam.swift */; };
+		E25BBB7A2A42C0B20050C8C6 /* Array+Duplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB792A42C0B20050C8C6 /* Array+Duplicates.swift */; };
+		E25BBB7C2A42C10D0050C8C6 /* MixParamJoinType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB7B2A42C10D0050C8C6 /* MixParamJoinType.swift */; };
+		E25BBB7E2A42C11D0050C8C6 /* MixParamSortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB7D2A42C11D0050C8C6 /* MixParamSortOrder.swift */; };
+		E25BBB802A42C12B0050C8C6 /* MixParamSortDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB7F2A42C12B0050C8C6 /* MixParamSortDirection.swift */; };
+		E25BBB822A42C1390050C8C6 /* MixParamSortableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB812A42C1390050C8C6 /* MixParamSortableProperty.swift */; };
+		E25BBB842A42C1470050C8C6 /* Array+VocalLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB832A42C1470050C8C6 /* Array+VocalLevel.swift */; };
+		E25BBB862A42C14F0050C8C6 /* Array+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB852A42C14F0050C8C6 /* Array+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E25BBB302A42B0990050C8C6 /* PredicateDecode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PredicateDecode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25BBB332A42B0990050C8C6 /* PredicateDecodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicateDecodeApp.swift; sourceTree = "<group>"; };
-		E25BBB352A42B0990050C8C6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E25BBB352A42B0990050C8C6 /* ChoonPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoonPredicate.swift; sourceTree = "<group>"; };
 		E25BBB372A42B0990050C8C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E25BBB392A42B09A0050C8C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E25BBB3B2A42B09A0050C8C6 /* PredicateDecode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PredicateDecode.entitlements; sourceTree = "<group>"; };
 		E25BBB3D2A42B09A0050C8C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E25BBB442A42B0E40050C8C6 /* Choon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choon.swift; sourceTree = "<group>"; };
+		E25BBB462A42B1E40050C8C6 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		E25BBB492A42B2890050C8C6 /* AppleSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSong.swift; sourceTree = "<group>"; };
+		E25BBB4B2A42B2A00050C8C6 /* AppleAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAlbum.swift; sourceTree = "<group>"; };
+		E25BBB4D2A42B2C30050C8C6 /* AppleArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleArtwork.swift; sourceTree = "<group>"; };
+		E25BBB4F2A42B2EE0050C8C6 /* AppleArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleArtist.swift; sourceTree = "<group>"; };
+		E25BBB522A42B31F0050C8C6 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
+		E25BBB542A42B3380050C8C6 /* VocalLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocalLevel.swift; sourceTree = "<group>"; };
+		E25BBB562A42B3950050C8C6 /* TagIdWithType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagIdWithType.swift; sourceTree = "<group>"; };
+		E25BBB582A42B3F30050C8C6 /* TagType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagType.swift; sourceTree = "<group>"; };
+		E25BBB5A2A42B4820050C8C6 /* ContentView+PredicateCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+PredicateCoding.swift"; sourceTree = "<group>"; };
+		E25BBB5C2A42B9E70050C8C6 /* Mix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mix.swift; sourceTree = "<group>"; };
+		E25BBB642A42BB820050C8C6 /* MixParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixParam.swift; sourceTree = "<group>"; };
+		E25BBB662A42BF050050C8C6 /* Mix+Predicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mix+Predicate.swift"; sourceTree = "<group>"; };
+		E25BBB682A42BF420050C8C6 /* EncodedPredicateContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodedPredicateContent.swift; sourceTree = "<group>"; };
+		E25BBB6B2A42C0080050C8C6 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		E25BBB6D2A42C00C0050C8C6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E25BBB6F2A42C01F0050C8C6 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		E25BBB712A42C0410050C8C6 /* MixParamType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixParamType.swift; sourceTree = "<group>"; };
+		E25BBB732A42C0460050C8C6 /* MixJoinTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixJoinTypes.swift; sourceTree = "<group>"; };
+		E25BBB752A42C0650050C8C6 /* MixRangeStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixRangeStrings.swift; sourceTree = "<group>"; };
+		E25BBB772A42C0870050C8C6 /* Array+MixParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+MixParam.swift"; sourceTree = "<group>"; };
+		E25BBB792A42C0B20050C8C6 /* Array+Duplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Duplicates.swift"; sourceTree = "<group>"; };
+		E25BBB7B2A42C10D0050C8C6 /* MixParamJoinType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixParamJoinType.swift; sourceTree = "<group>"; };
+		E25BBB7D2A42C11D0050C8C6 /* MixParamSortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixParamSortOrder.swift; sourceTree = "<group>"; };
+		E25BBB7F2A42C12B0050C8C6 /* MixParamSortDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixParamSortDirection.swift; sourceTree = "<group>"; };
+		E25BBB812A42C1390050C8C6 /* MixParamSortableProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixParamSortableProperty.swift; sourceTree = "<group>"; };
+		E25BBB832A42C1470050C8C6 /* Array+VocalLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+VocalLevel.swift"; sourceTree = "<group>"; };
+		E25BBB852A42C14F0050C8C6 /* Array+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +112,13 @@
 		E25BBB322A42B0990050C8C6 /* PredicateDecode */ = {
 			isa = PBXGroup;
 			children = (
+				E25BBB882A42C49C0050C8C6 /* Predicate Coding */,
+				E25BBB6A2A42C0020050C8C6 /* Extensions */,
+				E25BBB512A42B3180050C8C6 /* Data Structures */,
+				E25BBB482A42B22C0050C8C6 /* Models */,
 				E25BBB332A42B0990050C8C6 /* PredicateDecodeApp.swift */,
-				E25BBB352A42B0990050C8C6 /* Item.swift */,
 				E25BBB372A42B0990050C8C6 /* ContentView.swift */,
+				E25BBB5A2A42B4820050C8C6 /* ContentView+PredicateCoding.swift */,
 				E25BBB392A42B09A0050C8C6 /* Assets.xcassets */,
 				E25BBB3B2A42B09A0050C8C6 /* PredicateDecode.entitlements */,
 				E25BBB3C2A42B09A0050C8C6 /* Preview Content */,
@@ -70,6 +132,71 @@
 				E25BBB3D2A42B09A0050C8C6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E25BBB482A42B22C0050C8C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E25BBB4B2A42B2A00050C8C6 /* AppleAlbum.swift */,
+				E25BBB4F2A42B2EE0050C8C6 /* AppleArtist.swift */,
+				E25BBB4D2A42B2C30050C8C6 /* AppleArtwork.swift */,
+				E25BBB492A42B2890050C8C6 /* AppleSong.swift */,
+				E25BBB442A42B0E40050C8C6 /* Choon.swift */,
+				E25BBB5C2A42B9E70050C8C6 /* Mix.swift */,
+				E25BBB662A42BF050050C8C6 /* Mix+Predicate.swift */,
+				E25BBB462A42B1E40050C8C6 /* Tag.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E25BBB512A42B3180050C8C6 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				E25BBB872A42C3A60050C8C6 /* Array Extensions */,
+				E25BBB522A42B31F0050C8C6 /* Marker.swift */,
+				E25BBB732A42C0460050C8C6 /* MixJoinTypes.swift */,
+				E25BBB642A42BB820050C8C6 /* MixParam.swift */,
+				E25BBB7B2A42C10D0050C8C6 /* MixParamJoinType.swift */,
+				E25BBB812A42C1390050C8C6 /* MixParamSortableProperty.swift */,
+				E25BBB7F2A42C12B0050C8C6 /* MixParamSortDirection.swift */,
+				E25BBB7D2A42C11D0050C8C6 /* MixParamSortOrder.swift */,
+				E25BBB712A42C0410050C8C6 /* MixParamType.swift */,
+				E25BBB752A42C0650050C8C6 /* MixRangeStrings.swift */,
+				E25BBB562A42B3950050C8C6 /* TagIdWithType.swift */,
+				E25BBB582A42B3F30050C8C6 /* TagType.swift */,
+				E25BBB542A42B3380050C8C6 /* VocalLevel.swift */,
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		E25BBB6A2A42C0020050C8C6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E25BBB6B2A42C0080050C8C6 /* Date.swift */,
+				E25BBB6D2A42C00C0050C8C6 /* String.swift */,
+				E25BBB6F2A42C01F0050C8C6 /* Int.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E25BBB872A42C3A60050C8C6 /* Array Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E25BBB832A42C1470050C8C6 /* Array+VocalLevel.swift */,
+				E25BBB852A42C14F0050C8C6 /* Array+String.swift */,
+				E25BBB792A42C0B20050C8C6 /* Array+Duplicates.swift */,
+				E25BBB772A42C0870050C8C6 /* Array+MixParam.swift */,
+			);
+			path = "Array Extensions";
+			sourceTree = "<group>";
+		};
+		E25BBB882A42C49C0050C8C6 /* Predicate Coding */ = {
+			isa = PBXGroup;
+			children = (
+				E25BBB682A42BF420050C8C6 /* EncodedPredicateContent.swift */,
+				E25BBB352A42B0990050C8C6 /* ChoonPredicate.swift */,
+			);
+			path = "Predicate Coding";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +269,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E25BBB362A42B0990050C8C6 /* Item.swift in Sources */,
+				E25BBB742A42C0460050C8C6 /* MixJoinTypes.swift in Sources */,
+				E25BBB362A42B0990050C8C6 /* ChoonPredicate.swift in Sources */,
+				E25BBB4E2A42B2C30050C8C6 /* AppleArtwork.swift in Sources */,
+				E25BBB4A2A42B2890050C8C6 /* AppleSong.swift in Sources */,
+				E25BBB7A2A42C0B20050C8C6 /* Array+Duplicates.swift in Sources */,
+				E25BBB592A42B3F30050C8C6 /* TagType.swift in Sources */,
+				E25BBB692A42BF420050C8C6 /* EncodedPredicateContent.swift in Sources */,
+				E25BBB782A42C0870050C8C6 /* Array+MixParam.swift in Sources */,
+				E25BBB842A42C1470050C8C6 /* Array+VocalLevel.swift in Sources */,
+				E25BBB4C2A42B2A00050C8C6 /* AppleAlbum.swift in Sources */,
+				E25BBB862A42C14F0050C8C6 /* Array+String.swift in Sources */,
+				E25BBB502A42B2EE0050C8C6 /* AppleArtist.swift in Sources */,
+				E25BBB702A42C01F0050C8C6 /* Int.swift in Sources */,
+				E25BBB652A42BB820050C8C6 /* MixParam.swift in Sources */,
+				E25BBB5B2A42B4820050C8C6 /* ContentView+PredicateCoding.swift in Sources */,
+				E25BBB452A42B0E40050C8C6 /* Choon.swift in Sources */,
+				E25BBB472A42B1E40050C8C6 /* Tag.swift in Sources */,
+				E25BBB6C2A42C0080050C8C6 /* Date.swift in Sources */,
+				E25BBB5D2A42B9E70050C8C6 /* Mix.swift in Sources */,
 				E25BBB342A42B0990050C8C6 /* PredicateDecodeApp.swift in Sources */,
+				E25BBB7C2A42C10D0050C8C6 /* MixParamJoinType.swift in Sources */,
+				E25BBB552A42B3380050C8C6 /* VocalLevel.swift in Sources */,
+				E25BBB822A42C1390050C8C6 /* MixParamSortableProperty.swift in Sources */,
+				E25BBB762A42C0650050C8C6 /* MixRangeStrings.swift in Sources */,
+				E25BBB7E2A42C11D0050C8C6 /* MixParamSortOrder.swift in Sources */,
+				E25BBB672A42BF050050C8C6 /* Mix+Predicate.swift in Sources */,
+				E25BBB802A42C12B0050C8C6 /* MixParamSortDirection.swift in Sources */,
+				E25BBB572A42B3950050C8C6 /* TagIdWithType.swift in Sources */,
+				E25BBB6E2A42C00C0050C8C6 /* String.swift in Sources */,
 				E25BBB382A42B0990050C8C6 /* ContentView.swift in Sources */,
+				E25BBB532A42B31F0050C8C6 /* Marker.swift in Sources */,
+				E25BBB722A42C0410050C8C6 /* MixParamType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

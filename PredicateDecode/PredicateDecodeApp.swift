@@ -1,10 +1,3 @@
-//
-//  PredicateDecodeApp.swift
-//  PredicateDecode
-//
-//  Created by Ahmed Khalaf on 21/6/2023.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -15,6 +8,17 @@ struct PredicateDecodeApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Item.self)
+        .modelContainer(for: allModelTypes)
     }
+}
+
+var allModelTypes: [any PersistentModel.Type] {
+    [
+        AppleAlbum.self,
+        AppleArtist.self,
+        AppleSong.self,
+        Choon.self,
+        Mix.self,
+        Tag.self
+    ]
 }
