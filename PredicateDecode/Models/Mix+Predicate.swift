@@ -523,3 +523,160 @@ extension Array where Element == MixParam {
         return request.predicate
     }
 }
+
+//MARK: - Joins
+
+extension Array where Element == TagIdWithType {
+    var orStatementAndExpression: (Joinable, Expression) {
+        
+        func tagId(_ id: String) -> [Expression] {
+            [.keyPath("Choons.Choon.tagIds"), .string(id)]
+        }
+        func or(_ lhs: Joinable, _ rhs: Joinable) -> Joinable {
+            .or([lhs, rhs])
+        }
+        let contains: Joinable = .contains([.keyPath(.string), .stringValue])
+
+        guard count > 1 else {
+            fatalError("Trying to get OR statement for array with less than 2 tags")
+        }
+        
+        var expression: Expression
+        var statement: Joinable
+
+        var tags = self
+        let tag1 = tags.removeFirst()
+        let tag2 = tags.removeFirst()
+        statement = or(contains, contains)
+        expression = .array([
+            .array(tagId(tag1.id)),
+            .array(tagId(tag2.id))
+        ])
+
+        for tag in tags {
+            statement = or(statement, contains)
+            expression = .array([
+                expression,
+                .array(tagId(tag.id))
+            ])
+        }
+        
+        return (statement, expression)
+    }
+}
+
+extension Array where Element == String {
+    
+    var orStatementAndExpressionForArtists: (Joinable, Expression) {
+        
+        func appleArtistId(_ id: String) -> [Expression] {
+            [.keyPath("Choons.Choon.appleArtistIds"), .string(id)]
+        }
+        func or(_ lhs: Joinable, _ rhs: Joinable) -> Joinable {
+            .or([lhs, rhs])
+        }
+        let contains: Joinable = .contains([.keyPath(.string), .stringValue])
+
+        guard count > 1 else {
+            fatalError("Trying to get OR statement for array with less than 2 apple artists")
+        }
+        
+        var expression: Expression
+        var statement: Joinable
+
+        var artists = self
+        let artist1 = artists.removeFirst()
+        let artist2 = artists.removeFirst()
+        statement = or(contains, contains)
+        expression = .array([
+            .array(appleArtistId(artist1)),
+            .array(appleArtistId(artist2))
+        ])
+
+        for artist in artists {
+            statement = or(statement, contains)
+            expression = .array([
+                expression,
+                .array(appleArtistId(artist))
+            ])
+        }
+        
+        return (statement, expression)
+    }
+}
+
+extension Array where Element == VocalLevel {
+    var orStatementAndExpression: (Joinable, Expression) {
+        
+        func vocalLevelValue(_ value: Int) -> [Expression] {
+            [.keyPath("Choons.Choon.vocalLevelValue"), .int(value)]
+        }
+        func or(_ lhs: Joinable, _ rhs: Joinable) -> Joinable {
+            .or([lhs, rhs])
+        }
+        let equalsInt: Joinable = .equal([.keyPath(.int), .intValue])
+
+        guard count > 1 else {
+            fatalError("Trying to get OR statement for array with less than 2 vocal levels")
+        }
+        
+        var expression: Expression
+        var statement: Joinable
+
+        var vocalLevels = self
+        let level1 = vocalLevels.removeFirst()
+        let level2 = vocalLevels.removeFirst()
+        statement = or(equalsInt, equalsInt)
+        expression = .array([
+            .array(vocalLevelValue(level1.rawValue)),
+            .array(vocalLevelValue(level2.rawValue))
+        ])
+
+        for level in vocalLevels {
+            statement = or(statement, equalsInt)
+            expression = .array([
+                expression,
+                .array(vocalLevelValue(level.rawValue))
+            ])
+        }
+        
+        return (statement, expression)
+    }
+    
+    var andStatementAndExpression: (Joinable, Expression) {
+        
+        func vocalLevelValue(_ value: Int) -> [Expression] {
+            [.keyPath("Choons.Choon.vocalLevelValue"), .int(value)]
+        }
+        func and(_ lhs: Joinable, _ rhs: Joinable) -> Joinable {
+            .and([lhs, rhs])
+        }
+        let notEqualsInt: Joinable = .notEqual([.keyPath(.int), .intValue])
+
+        guard count > 1 else {
+            fatalError("Trying to get AND statement for array with less than 2 vocal levels")
+        }
+        
+        var expression: Expression
+        var statement: Joinable
+
+        var vocalLevels = self
+        let level1 = vocalLevels.removeFirst()
+        let level2 = vocalLevels.removeFirst()
+        statement = and(notEqualsInt, notEqualsInt)
+        expression = .array([
+            .array(vocalLevelValue(level1.rawValue)),
+            .array(vocalLevelValue(level2.rawValue))
+        ])
+
+        for level in vocalLevels {
+            statement = and(statement, notEqualsInt)
+            expression = .array([
+                expression,
+                .array(vocalLevelValue(level.rawValue))
+            ])
+        }
+        
+        return (statement, expression)
+    }
+}

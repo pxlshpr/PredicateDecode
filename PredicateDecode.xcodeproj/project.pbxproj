@@ -26,7 +26,7 @@
 		E25BBB5D2A42B9E70050C8C6 /* Mix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB5C2A42B9E70050C8C6 /* Mix.swift */; };
 		E25BBB652A42BB820050C8C6 /* MixParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB642A42BB820050C8C6 /* MixParam.swift */; };
 		E25BBB672A42BF050050C8C6 /* Mix+Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB662A42BF050050C8C6 /* Mix+Predicate.swift */; };
-		E25BBB692A42BF420050C8C6 /* EncodedPredicateContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB682A42BF420050C8C6 /* EncodedPredicateContent.swift */; };
+		E25BBB692A42BF420050C8C6 /* CustomPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB682A42BF420050C8C6 /* CustomPredicate.swift */; };
 		E25BBB6C2A42C0080050C8C6 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB6B2A42C0080050C8C6 /* Date.swift */; };
 		E25BBB6E2A42C00C0050C8C6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB6D2A42C00C0050C8C6 /* String.swift */; };
 		E25BBB702A42C01F0050C8C6 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBB6F2A42C01F0050C8C6 /* Int.swift */; };
@@ -65,7 +65,7 @@
 		E25BBB5C2A42B9E70050C8C6 /* Mix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mix.swift; sourceTree = "<group>"; };
 		E25BBB642A42BB820050C8C6 /* MixParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixParam.swift; sourceTree = "<group>"; };
 		E25BBB662A42BF050050C8C6 /* Mix+Predicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mix+Predicate.swift"; sourceTree = "<group>"; };
-		E25BBB682A42BF420050C8C6 /* EncodedPredicateContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodedPredicateContent.swift; sourceTree = "<group>"; };
+		E25BBB682A42BF420050C8C6 /* CustomPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPredicate.swift; sourceTree = "<group>"; };
 		E25BBB6B2A42C0080050C8C6 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		E25BBB6D2A42C00C0050C8C6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E25BBB6F2A42C01F0050C8C6 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
@@ -112,7 +112,8 @@
 		E25BBB322A42B0990050C8C6 /* PredicateDecode */ = {
 			isa = PBXGroup;
 			children = (
-				E25BBB882A42C49C0050C8C6 /* Predicate Coding */,
+				E25BBB352A42B0990050C8C6 /* ChoonPredicate.swift */,
+				E25BBB682A42BF420050C8C6 /* CustomPredicate.swift */,
 				E25BBB6A2A42C0020050C8C6 /* Extensions */,
 				E25BBB512A42B3180050C8C6 /* Data Structures */,
 				E25BBB482A42B22C0050C8C6 /* Models */,
@@ -188,15 +189,6 @@
 				E25BBB772A42C0870050C8C6 /* Array+MixParam.swift */,
 			);
 			path = "Array Extensions";
-			sourceTree = "<group>";
-		};
-		E25BBB882A42C49C0050C8C6 /* Predicate Coding */ = {
-			isa = PBXGroup;
-			children = (
-				E25BBB682A42BF420050C8C6 /* EncodedPredicateContent.swift */,
-				E25BBB352A42B0990050C8C6 /* ChoonPredicate.swift */,
-			);
-			path = "Predicate Coding";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +267,7 @@
 				E25BBB4A2A42B2890050C8C6 /* AppleSong.swift in Sources */,
 				E25BBB7A2A42C0B20050C8C6 /* Array+Duplicates.swift in Sources */,
 				E25BBB592A42B3F30050C8C6 /* TagType.swift in Sources */,
-				E25BBB692A42BF420050C8C6 /* EncodedPredicateContent.swift in Sources */,
+				E25BBB692A42BF420050C8C6 /* CustomPredicate.swift in Sources */,
 				E25BBB782A42C0870050C8C6 /* Array+MixParam.swift in Sources */,
 				E25BBB842A42C1470050C8C6 /* Array+VocalLevel.swift in Sources */,
 				E25BBB4C2A42B2A00050C8C6 /* AppleAlbum.swift in Sources */,
